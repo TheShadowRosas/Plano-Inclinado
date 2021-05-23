@@ -1,7 +1,5 @@
 extends KinematicBody2D
 var velocidad=Vector2.ZERO
-var eme=0
-var f=0.1
 
 func _process(delta):
 	if Var.tetha==0:
