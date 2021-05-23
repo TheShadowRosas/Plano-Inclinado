@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Bouncy Platform Long.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 440.392, 21.1492 )
+
+[node name="plataforma" type="KinematicBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -2.21749, -2.03285 )
+rotation = 0.000374913
+scale = Vector2( 2.93196, 1 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.51279, -1.50934 )
+rotation = 0.000334978
+shape = SubResource( 1 )

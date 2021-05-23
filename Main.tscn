@@ -1,0 +1,176 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://fondo de pantalla.jpg" type="Texture" id=1]
+[ext_resource path="res://plataforma.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Main.gd" type="Script" id=4]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="fondo de pantalla" type="Sprite" parent="."]
+position = Vector2( 702.532, 431.307 )
+scale = Vector2( 0.375678, 0.410081 )
+texture = ExtResource( 1 )
+
+[node name="mover" parent="." instance=ExtResource( 3 )]
+position = Vector2( 637.989, 416.891 )
+rotation = 0.000884645
+
+[node name="pos" type="Position2D" parent="mover"]
+position = Vector2( -0.942673, -57.1523 )
+
+[node name="Rotar" type="Button" parent="."]
+margin_left = 166.982
+margin_top = 5.51922
+margin_right = 264.982
+margin_bottom = 44.5192
+text = "ROTAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Detener" type="Button" parent="."]
+margin_left = 167.57
+margin_top = 51.0
+margin_right = 261.57
+margin_bottom = 92.0
+text = "DETENER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mah" type="Label" parent="."]
+anchor_right = 0.138
+anchor_bottom = 0.197
+margin_left = 154.0
+margin_top = 102.0
+margin_right = 301.0
+margin_bottom = 116.0
+text = "Ángulo de inclinación"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="angulo" type="Label" parent="."]
+margin_left = 170.0
+margin_top = 120.0
+margin_right = 250.0
+margin_bottom = 138.0
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Aumentar" type="Button" parent="."]
+margin_left = 384.931
+margin_top = 22.1973
+margin_right = 494.931
+margin_bottom = 66.1973
+text = "Aumentar peso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="detener" type="Button" parent="."]
+margin_left = 514.736
+margin_top = 25.4319
+margin_right = 578.736
+margin_bottom = 66.4319
+text = "Detener"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="meh" type="Label" parent="."]
+margin_left = 512.0
+margin_top = 74.0
+margin_right = 590.0
+margin_bottom = 101.0
+text = "Peso en kg"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="weight" type="Label" parent="."]
+margin_left = 503.542
+margin_top = 93.2761
+margin_right = 591.542
+margin_bottom = 122.276
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Disminuir" type="Button" parent="."]
+margin_left = 596.0
+margin_top = 27.0
+margin_right = 706.0
+margin_bottom = 66.0
+text = "Disminuir peso"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="másfricción" type="Button" parent="."]
+margin_left = 844.0
+margin_top = 18.0
+margin_right = 916.0
+margin_bottom = 42.0
+text = "Aumentar fricción"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="detenerfricción" type="Button" parent="."]
+margin_left = 880.0
+margin_top = 53.0
+margin_right = 956.0
+margin_bottom = 78.0
+text = "Detener"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menosfricción" type="Button" parent="."]
+margin_left = 849.0
+margin_top = 88.0
+margin_right = 978.0
+margin_bottom = 114.0
+text = "Disminuir Fricción"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 871.742
+margin_top = 118.997
+margin_right = 955.742
+margin_bottom = 139.997
+text = "Fricción"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vale" type="Label" parent="."]
+margin_left = 866.0
+margin_top = 131.0
+margin_right = 952.0
+margin_bottom = 148.0
+text = "0.1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Rotar" to="." method="_on_Rotar_pressed"]
+[connection signal="pressed" from="Detener" to="." method="_on_Detener_pressed"]
+[connection signal="pressed" from="Aumentar" to="." method="_on_Aumentar_pressed"]
+[connection signal="pressed" from="detener" to="." method="_on_detener_pressed"]
+[connection signal="pressed" from="Disminuir" to="." method="_on_Disminuir_pressed"]
+[connection signal="pressed" from="másfricción" to="." method="_on_msfriccin_pressed"]
+[connection signal="pressed" from="detenerfricción" to="." method="_on_detenerfriccin_pressed"]
+[connection signal="pressed" from="menosfricción" to="." method="_on_menosfriccin_pressed"]
